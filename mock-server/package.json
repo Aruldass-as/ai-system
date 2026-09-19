@@ -1,0 +1,30 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "description": "Mock API server for AI microfrontend applications",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "build": "tsc",
+    "start:prod": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mock-server",
+    "express",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}
