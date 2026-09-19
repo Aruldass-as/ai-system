@@ -1,0 +1,20 @@
+.shell-nav {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.shell-nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.shell-nav a.active {
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.shell-content {
+  padding: 1rem;
+}

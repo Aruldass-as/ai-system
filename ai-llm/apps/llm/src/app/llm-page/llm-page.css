@@ -1,0 +1,23 @@
+.llm-page {
+  padding: 24px;
+}
+
+.models {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.model-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.model-card h2 {
+  margin-top: 0;
+}
+
+.error {
+  color: red;
+}

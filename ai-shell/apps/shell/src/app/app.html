@@ -1,0 +1,13 @@
+<nav class="shell-nav">
+  <a routerLink="/llm" routerLinkActive="active">LLM</a>
+  <a routerLink="/mcp" routerLinkActive="active">MCP</a>
+  <a routerLink="/rag" routerLinkActive="active">RAG</a>
+  <a routerLink="/agents" routerLinkActive="active">Agents</a>
+</nav>
+<main class="shell-content">
+  <router-outlet></router-outlet>
+</main>
+
+
+<app-nx-welcome></app-nx-welcome>
+<router-outlet></router-outlet>

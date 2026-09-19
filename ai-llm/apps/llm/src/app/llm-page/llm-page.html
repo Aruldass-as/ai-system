@@ -1,0 +1,42 @@
+<p>llm-page works!</p>
+<div class="llm-page">
+
+  <h1>LLM Models</h1>
+
+  @if (loading) {
+    <p>Loading models...</p>
+  }
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  @if (!loading && !error) {
+
+    <div class="models">
+
+      @for (model of models; track model.id) {
+
+        <div class="model-card">
+
+          <h2>{{ model.name }}</h2>
+
+          <p>
+            <strong>Provider:</strong>
+            {{ model.provider }}
+          </p>
+
+          <p>
+            <strong>Status:</strong>
+            {{ model.status }}
+          </p>
+
+        </div>
+
+      }
+
+    </div>
+
+  }
+
+</div>
