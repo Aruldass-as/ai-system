@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "start:all": "(cd ai-shell && npx nx serve shell) & (cd ai-llm && npx nx serve llm) & (cd ai-mcp && npx nx serve mcp) & (cd ai-rag && npx nx serve rag) & (cd ai-agents && npx nx serve agents) & wait"
+  }
+}
