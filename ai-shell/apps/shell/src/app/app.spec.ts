@@ -10,10 +10,12 @@ describe('App', () => {
     }).compileComponents();
   });
 
-  it('should render remote navigation', async () => {
+  it('should render portfolio navigation and footer', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.shell-nav')?.textContent).toContain('LLM');
+    expect(compiled.querySelector('.site-navigation')?.textContent).toContain('home');
+    expect(compiled.querySelector('.site-navigation')?.textContent).toContain('projects');
+    expect(compiled.querySelector('app-site-footer')).not.toBeNull();
   });
 });

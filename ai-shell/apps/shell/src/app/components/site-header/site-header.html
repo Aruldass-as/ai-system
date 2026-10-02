@@ -1,0 +1,25 @@
+<header class="site-header">
+  <a class="brand" routerLink="/" aria-label="Aruldass A, home" (click)="closeMenu()">
+    <span class="brand-mark" aria-hidden="true">✦</span>
+    <span>Aruldass A</span>
+  </a>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    [attr.aria-expanded]="menuOpen"
+    aria-controls="site-navigation"
+    [attr.aria-label]="menuOpen ? 'Close navigation' : 'Open navigation'"
+    (click)="menuOpen = !menuOpen"
+  >
+    <span></span><span></span>
+  </button>
+
+  <nav id="site-navigation" class="site-navigation" [class.is-open]="menuOpen" aria-label="Main navigation">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()"><span>#</span>home</a>
+    <a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()"><span>#</span>projects</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()"><span>#</span>about-me</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()"><span>#</span>contacts</a>
+    <button class="language" type="button" aria-label="Language: English">EN <span aria-hidden="true">⌄</span></button>
+  </nav>
+</header>

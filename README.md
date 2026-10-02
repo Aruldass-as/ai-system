@@ -15,3 +15,7 @@ run app individual:
 run app all:
 ------------
 npm run start:all
+
+build:
+------
+Run all application: cat build-all.sh

@@ -1,11 +1,31 @@
 import { Route } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/native-federation';
+import { HomePage } from './pages/home/home-page';
+import { AboutPage } from './pages/about/about-page';
+import { ContactPage } from './pages/contact/contact-page';
+import { ProjectsPage } from './pages/projects/projects-page';
 
 export const appRoutes: Route[] = [
-    {
+  {
     path: '',
-    redirectTo: 'llm',
+    component: HomePage,
     pathMatch: 'full',
+  },
+  {
+    path: 'home',
+    component: HomePage,
+  },
+  {
+    path: 'about',
+    component: AboutPage,
+  },
+  {
+    path: 'contact',
+    component: ContactPage,
+  },
+  {
+    path: 'projects',
+    component: ProjectsPage,
   },
   {
     path: 'llm',

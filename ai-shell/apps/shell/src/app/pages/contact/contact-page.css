@@ -1,0 +1,148 @@
+:host {
+  display: block;
+}
+
+.page {
+  width: min(1024px, calc(100% - 48px));
+  min-height: 430px;
+  margin: 0 auto;
+}
+
+.page-title {
+  margin: 48px 0 42px;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.page-title h1 span,
+.elsewhere h2 span {
+  color: var(--accent);
+}
+
+.page-title p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.intro {
+  max-width: 510px;
+  margin: 0;
+  color: var(--muted);
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.contact-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.contact-card {
+  display: grid;
+  min-width: 230px;
+  gap: 13px;
+  border: 1px solid var(--line);
+  padding: 16px;
+}
+
+.contact-card h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-card a,
+.contact-card p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--accent-soft);
+}
+
+.contact-symbol {
+  display: inline-grid;
+  width: 20px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--accent);
+}
+
+.support-card {
+  min-width: 186px;
+}
+
+.elsewhere {
+  margin-top: 70px;
+}
+
+.elsewhere h2 {
+  margin: 0 0 18px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.media-links {
+  display: flex;
+  gap: 14px;
+}
+
+.media-links a {
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.media-links a span {
+  color: var(--accent);
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: calc(100% - 32px);
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title h1 {
+    font-size: 25px;
+  }
+
+  .contact-groups {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card,
+  .support-card {
+    min-width: 0;
+  }
+}

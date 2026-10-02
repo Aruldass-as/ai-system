@@ -1,0 +1,125 @@
+:host {
+  display: block;
+}
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1024px, calc(100% - 48px));
+  min-height: 80px;
+  margin: 0 auto;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 28%, transparent);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-mark {
+  color: var(--accent);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.site-navigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.site-navigation a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.site-navigation a span {
+  color: var(--accent);
+}
+
+.site-navigation a:hover,
+.site-navigation a.active {
+  color: var(--text);
+}
+
+.site-navigation a.active {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 7px;
+}
+
+.language {
+  border: 0;
+  padding: 8px 0;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+}
+
+.language span {
+  color: var(--muted);
+}
+
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 1px;
+  margin: 5px auto;
+  background: var(--text);
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    width: calc(100% - 32px);
+    min-height: 64px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-navigation {
+    position: absolute;
+    top: 63px;
+    right: -16px;
+    left: -16px;
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 24px 22px;
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 35%, transparent);
+    background: var(--page);
+  }
+
+  .site-navigation.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-navigation a {
+    padding: 13px 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 18%, transparent);
+  }
+
+  .language {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+}

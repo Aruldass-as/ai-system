@@ -1,0 +1,87 @@
+:host {
+  display: block;
+}
+
+.site-footer {
+  margin-top: 96px;
+  border-top: 1px solid color-mix(in srgb, var(--line) 35%, transparent);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  width: min(1024px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 32px 0 28px;
+}
+
+.footer-main p,
+.copyright {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-main p {
+  margin: 12px 0 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-mark {
+  color: var(--accent);
+  font-size: 21px;
+}
+
+.email {
+  margin-left: 20px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.email:hover,
+.social-links a:hover {
+  color: var(--accent-soft);
+}
+
+.footer-socials h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.social-links {
+  display: flex;
+  gap: 18px;
+}
+
+.social-links a {
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.copyright {
+  margin: 0;
+  padding: 0 16px 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    width: calc(100% - 32px);
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .email {
+    display: block;
+    margin: 9px 0 0;
+  }
+}

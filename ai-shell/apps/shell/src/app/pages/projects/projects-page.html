@@ -1,0 +1,31 @@
+<div class="page">
+  <div class="page-title"><h1><span>/</span>projects</h1><p>List of my projects</p></div>
+
+  <section class="project-section" aria-labelledby="complete-heading">
+    <h2 id="complete-heading"><span>#</span>complete-apps</h2>
+    <div class="project-grid featured-grid">
+      @for (project of featured; track project.name; let index = $index) {
+        <article class="project-card">
+          <div class="project-art" [class]="'project-art art-' + project.kind" aria-hidden="true">
+            <div class="preview-window"><span class="preview-top">{{ project.name }}</span><span class="preview-line"></span><span class="preview-line short"></span><span class="preview-button"></span></div>
+            <span class="preview-index">0{{ index + 1 }}</span>
+          </div>
+          <p class="tags">{{ project.tags.join(' ') }}</p>
+          <div class="project-info"><h3>{{ project.name }}</h3><p>{{ project.description }}</p><a [href]="project.action === 'GitHub' ? 'https://github.com/' : 'https://example.com/'" target="_blank" rel="noreferrer">{{ project.action }} <span aria-hidden="true">↗</span></a></div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="project-section small-section" aria-labelledby="small-heading">
+    <h2 id="small-heading"><span>#</span>small-projects</h2>
+    <div class="project-grid small-grid">
+      @for (project of small; track project.name) {
+        <article class="project-card">
+          <p class="tags">{{ project.tags.join(' ') }}</p>
+          <div class="project-info"><h3>{{ project.name }}</h3><p>{{ project.description }}</p><a [href]="project.action === 'GitHub' ? 'https://github.com/' : 'https://example.com/'" target="_blank" rel="noreferrer">{{ project.action }} <span aria-hidden="true">↗</span></a></div>
+        </article>
+      }
+    </div>
+  </section>
+</div>
