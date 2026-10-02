@@ -2,7 +2,8 @@
 
 :root {
 	color-scheme: dark;
-	--page: #282c33;
+	/* --page: #282c33; */
+	--page:#1e1246;
 	--surface: #20242b;
 	--surface-raised: #2d323b;
 	--line: #abb2bf;
